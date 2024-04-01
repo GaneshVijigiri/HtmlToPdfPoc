@@ -1,0 +1,949 @@
+﻿<html>
+<head>
+    <style type="text/css">
+        table td {
+            color: #000;
+            font-size: 14px;
+            font-family: Arial !important;
+        }
+
+        .tblBorder {
+        }
+
+        #tblHeader td {
+            vertical-align: top !important;
+        }
+
+        .tblBorder table {
+            color: #000;
+            border: solid 1px #000;
+            border-collapse: collapse;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            width: 100%;
+            empty-cells: show;
+            font-weight: normal;
+        }
+
+            .tblBorder table th {
+                color: #000;
+                border: solid 1px #000;
+                background-color: #EEEEEE;
+                margin: 0px;
+                padding: 5px;
+                font-weight: bold;
+                font-size: 14px;
+                text-align: left;
+            }
+
+            .tblBorder table td {
+                vertical-align: top;
+                color: #000;
+                border: solid 1px #000;
+                margin: 0px;
+                font-weight: normal;
+                font-size: 14px;
+                word-wrap: break-word;
+            }
+
+        label {
+            text-indent: 0px;
+        }
+
+        .tblReport {
+        }
+
+            .tblReport table {
+                color: #000;
+                border: solid 0px #EEEEEE;
+                border-collapse: collapse;
+                empty-cells: show;
+                font-weight: normal;
+                font-size: 14px;
+            }
+
+                .tblReport table th {
+                    color: #000;
+                    border: solid 1px #EEEEEE;
+                    margin: 2px;
+                    padding: 1px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-align: left;
+                }
+
+                .tblReport table td {
+                    vertical-align: middle;
+                    color: #000;
+                    border-left: solid 1px #CCCCCC;
+                    border-right: solid 1px #CCCCCC;
+                    padding: 3px 3px 3px 3px;
+                    font-weight: normal;
+                    font-size: 14px;
+                    word-wrap: break-word;
+                    margin: 2px;
+                }
+
+        .currentResult {
+            font-weight: bold !important;
+            font-size: 14px !important;
+        }
+
+        .reportContentLeft {
+            float: left;
+            min-height: 73px;
+            width: 652px;
+        }
+
+            .reportContentLeft b {
+                font-weight: 600;
+                font-size: 14px;
+                font-family: Arial;
+            }
+
+        .reportContentRight {
+            width: 340px; /* padding: 5px;*/ /* margin-left: 10px;*/
+            float: right;
+            min-height: 80px;
+            border: 1px solid #747474;
+        }
+
+            .reportContentRight b {
+                font-weight: 600;
+                font-size: 14px;
+                font-family: Arial;
+            }
+
+        .bodyStyle {
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+            .bodyStyle b {
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+        .Critical {
+            background-color: #ff6969 !important;
+        }
+
+        .Caution {
+            background-color: #ffff00 !important;
+        }
+
+        .Normal {
+            background-color: #92d050 !important;
+        }
+
+        .BCritical {
+            background-color: #FED0D0 !important;
+        }
+
+        .BCaution {
+            background-color: #FCF9CE !important;
+        }
+
+        .BNormal {
+            background-color: #CEE6C3 !important;
+        }
+
+        img {
+            text-decoration: none;
+            border-width: 0px !important;
+        }
+
+        .commentBorder label {
+            font-family: Arial !important;
+            font-size: 12px !important;
+            font-weight: bold;
+        }
+
+        .BContentLeft {
+            background-color: #EEEEEE !important;
+        }
+
+
+        .commentBorder {
+            border: #c7c7c7 1px solid;
+            border-collapse: inherit;
+            margin: 0px 0px !important;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 1000px; margin: auto;">
+        <table style="width: 100%; page-break-inside: avoid">
+            <tr>
+                <td width="100%">
+                    <table width="100%" cellpadding="0" cellspacing="0" style="vertical-align: top">
+                        <tr>
+                            <td>
+                                <div style="width: 1000px">          <img src="http://localhost:9009//Static/Logo.jpg" alt="Logo" />      </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-size: 13px; font-weight: bold;">
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse; clear: both">
+                        <tr>
+                            <td valign="top">
+                                <span style="font-size: 19px; font-weight: bold;">BULK INDEPENDENCE&nbsp;[9374002] </span>
+                            </td>
+                            <td width="350px" rowspan="2" valign="top" height="60px" style="text-align: center;">
+                                <table width="100%">
+                                    <tr>
+                                        <td>
+                                            <div class="BNormal" style="width: 346px">
+                                                <img height='68px' width='338px' src='http://localhost:9009/Static/Green_Rating.jpg' />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" colspan="2">
+                                <span style="font-size: 19px; font-weight: bold;">
+                                    M/E L.O. SETTLING TANK&nbsp;
+                                    [-]
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" style="padding-right: 2px">
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td valign="top" class="reportContentLeft">
+                                            <div style="width: 99.5%; border: 1px solid #747474; margin-top: 3px">
+                                                <table cellpadding="0" id="tblHeader" cellspacing="0" width="99.8%" style="background-color: #EEEEEE; margin: 2px">
+                                                    <tr>
+                                                        <td width="6%">
+                                                            <b>Manufacturer</b>
+                                                        </td>
+                                                        <td width="1%">
+                                                            :
+                                                        </td>
+                                                        <td width="25%">
+                                                            NOT APPLICABLE
+                                                        </td>
+                                                        <td width="6%">
+                                                            <b>Model</b>
+                                                        </td>
+                                                        <td width="1%">
+                                                            :
+                                                        </td>
+                                                        <td width="6%">
+                                                            N.A.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>Port Landed</b>
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                            Netherlands
+                                                        </td>
+                                                        <td>
+                                                            <b>Volume[ltr]</b>
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>Fuel Grade / S%</b>
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                        <td>
+                                                            <b>Dispatched</b>
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                            02-Oct-23
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="white-space:nowrap">
+                                                            <b>Recommended</b>
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                            NAVIGO 6 CO
+                                                        </td>
+                                                        <td>
+                                                            <b>Received</b>
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                            05-Oct-23
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="margin-bottom: 2px">
+                                        <td class="tblReport" style="width: 652px; vertical-align: top; float: left; height: auto; margin-right: 0px">
+                                            <div style="width: 100%; margin-right: 0px; margin-top: 2px">
+                                                <table width="100%" cellpadding="0" cellspacing="0" style="margin-right: 0px">
+                                                    <tr bgcolor="#C3C3C3">
+                                                        <th style="border: solid 0px #CCCCCC" bgcolor="white" colspan="2"></th>
+                                                        <th bgcolor="#C3C3C3">
+                                                            Sample Details
+                                                        </th>
+                                                        <th bgcolor="#C3C3C3">
+                                                            1 (Current)
+                                                        </th>
+                                                        <th bgcolor="#C3C3C3">
+                                                            2
+                                                        </th>
+                                                        <th bgcolor="#C3C3C3" style="border-right: 1px solid #CCCCCC;">
+                                                            3
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" rowspan="8" style="border-left: 0px;"></td>
+                                                        <td>
+                                                            Rating
+                                                        </td>
+                                                        <td class="currentResult Normal" style="width: 83px;">
+                                                            Normal
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class=" " style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Sample No
+                                                        </td>
+                                                        <td class="currentResult" style="width: 83px;">
+                                                            23098209
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            Bottle No
+                                                        </td>
+                                                        <td class="currentResult" style="width: 83px;">
+                                                            50333166
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            Sampled Date
+                                                        </td>
+                                                        <td class="currentResult" style="width: 83px;">
+                                                            26-Sep-23
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Oil Grade In Use
+                                                        </td>
+                                                        <td class="currentResult" style="width: 83px;">
+                                                            NAVIGO 6 CO
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Unit Service Hrs
+                                                        </td>
+                                                        <td class="currentResult" style="width: 83px;">
+                                                            75148
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Oil Service Hrs
+                                                        </td>
+                                                        <td class="currentResult" style="width: 83px;">
+                                                            Not Stated
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Daily Makeup[ltr]
+                                                        </td>
+                                                        <td class="currentResult" style="width: 83px;">
+                                                            Not Stated
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                        <td style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr bgcolor="#C3C3C3">
+                                                        <td style="border-left: solid 1px #CCCCCC; border-top: solid 1px #CCCCCC; width: 75px; font-size: 13px; font-weight: bold; color: #000">
+                                                            New Oil
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; border-top: solid 1px #CCCCCC; width: 91px; font-size: 13px; font-weight: bold; color: #000">
+                                                            Alert Value.
+                                                        </td>
+                                                        <td colspan="4" style="font-size: 13px; font-weight: bold; color: #000;">
+                                                            Analysis
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            Appearance
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            Dark
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                            100
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            KV@40°C[mm²/s]
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            118.9
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                            11.5
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                            <9.3 or>15.5*
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            KV@100°C[mm²/s]
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            12.61
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                            6
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                            <2 or>30*
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            BN[mgKOH/g]
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            8.9
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                            <170*
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            Flash Point[°C]
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            >200
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                            >1.2*
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            Soot/Insoluble[%wt]
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            0.20
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                            >0.5*
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            Water[%wt]
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            0.07
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 75px;vertical-align:top">
+                                                        </td>
+                                                        <td style="border-left: solid 1px #CCCCCC; width: 91px; vertical-align: top">
+                                                        </td>
+                                                        <td style="width: 145px;vertical-align:top">
+                                                            PQ Index/2ml
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px; vertical-align:top">
+                                                            <10
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                        <td class="" style="width: 83px; vertical-align: top">
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="border-bottom: solid 1px #CCCCCC;"></td>
+                                                        <td style="border-bottom: solid 1px #CCCCCC;"></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td style=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border: solid 1px #CCCCCC; border-top: solid 1px #CCCCCC; width: 83px; font-size: 13px; font-weight: bold; color: #000">
+                                                        </td>
+                                                        <td bgcolor="#C3C3C3" colspan="4" style="font-size: 13px; font-weight: bold; color: #000">
+                                                            Wear Elemental [ppm]
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >100*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Aluminium (Al)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            2
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >50*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Chromium (Cr)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            <1
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >100*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Copper (Cu)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            4
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >200*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Iron (Fe)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            14
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >100*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Lead (Pb)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            <1
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >100*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Tin (Sn)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            <1
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border: solid 1px #CCCCCC; border-top: solid 1px #CCCCCC; width: 83px; font-size: 13px; font-weight: bold; color: #000">
+                                                        </td>
+                                                        <td bgcolor="#C3C3C3" colspan="4" style="font-size: 13px; font-weight: bold; color: #000">
+                                                            Contaminant Elemental [ppm]
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Boron (B)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            6
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >250*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Sodium (Na)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            22
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                            >100*
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Silicon (Si)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            7
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Molybdenum (Mo)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            <1
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Nickel (Ni)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            3
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Silver (Ag)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            <1
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Vanadium (V)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            3
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border: solid 1px #CCCCCC; border-top: solid 1px #CCCCCC; width: 83px; font-size: 13px; font-weight: bold; color: #000">
+                                                        </td>
+                                                        <td bgcolor="#C3C3C3" colspan="4" style="font-size: 13px; font-weight: bold; color: #000">
+                                                            Additive Elements  [ppm]
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Calcium (Ca)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            3524
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Phosphorus (P)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            466
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Zinc (Zn)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            528
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-left: solid 1px #CCCCCC;  width: 83px">
+                                                        </td>
+                                                        <td style="width: 145px">
+                                                            Magnesium (Mg)
+                                                        </td>
+                                                        <td class="currentResult " style="width: 83px;">
+                                                            17
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                        <td class="" style="width: 83px;">
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="border: 0px"></td>
+                                                        <td style="border-bottom: solid 1px #CCCCCC;"></td>
+                                                        <td style="border-bottom: solid 1px #CCCCCC;"></td>
+                                                        <td style="border-bottom: solid 1px #CCCCCC;"></td>
+                                                        <td style="border-bottom: solid 1px #CCCCCC;"></td>
+                                                        <td style="border-bottom: solid 1px #CCCCCC;"></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td rowspan="2" style="vertical-align: top; clear: both; border: 0px; float: right; padding: 0px">
+                                <table width='340px' cellpadding='3' cellspacing='3' style='color: #000; border: solid 0px #CCCCCC; border-collapse: collapse;font-size: 11px;'><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/241776/1642171/3.jpg' width='340' height='250' border='0' /></td></tr><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/241776/1642171/8.jpg' width='340' height='250' border='0' /></td></tr><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/241776/1642171/7.jpg' width='340' height='250' border='0' /></td></tr><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/241776/1642171/4.jpg' width='340' height='250' border='0' /></td></tr><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/241776/1642171/we.jpg' width='340' height='250' border='0' /></td></tr></table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100%" style="height: 250px; vertical-align: top; flot: left">
+                                <table width="100%" style="height: 250px; padding: 0px">
+                                    <tr>
+                                        <td class="commentBorder" style="vertical-align: top;">
+                                            <table width="99%" height="148px" style="padding: 0px; margin: 1px">
+                                                <tr>
+                                                    <td valign="top">
+                                                        <label>
+                                                            Oil Rating:
+                                                        </label><br />
+                                                        The oil is fit for further use provided the landed used oil sample is representative for the application.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <label>
+                                                            Unit Rating:
+                                                        </label><br />
+                                                        Wear rate is normal; no abnormalities are evident.
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="commentBorder" style="vertical-align: top;" width="99.8%">
+                                            <div class="BNormal" style="padding-left: 3px;">
+                                                <label>
+                                                    Action:
+                                                </label>
+                                                <br />
+                                                No action required.
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label style="float:left;width:90px">Alert Value</label><label style="margin-left:10px">:* Indicate Oil supplier/operator critical limits.</label>
+                            </td>
+                            <td>
+                                <label style="float: right;margin-right:4px">
+                                    Dated: 12-Mar-2024
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="float: left;">
+                                <label style='float:left;width:90px'>
+                                    Support
+                                </label><label style="margin-left:10px">:  technical @lukoil.com</label>
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

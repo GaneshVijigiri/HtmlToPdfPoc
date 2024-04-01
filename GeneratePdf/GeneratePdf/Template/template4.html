@@ -1,0 +1,849 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+
+       /* @font-face {
+            font-family: 'Helvetica Neue LT Pro';
+            src: url( http://uoa.tribocare.com/Static/CSS/HelveticaNeueLTPro-Md.otf);
+        }*/
+
+        table td {
+            color: #000;
+            font-size: 13px !important;
+            font-family: 'Helvetica Neue LT Pro' !important;
+        }
+
+        .tblBorder {
+        }
+
+            .tblBorder table {
+                color: #000;
+                border: solid 0px #000;
+                border-collapse: collapse;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                width: 100%;
+                empty-cells: show;
+                font-weight: normal;
+            }
+
+                .tblBorder table th {
+                    color: #000;
+                    border: solid 1px #000;
+                    background-color: #EEEEEE;
+                    margin: 0px;
+                    padding: 5px;
+                    font-weight: bold;
+                    font-size: 13px;
+                    text-align: left;
+                }
+
+                .tblBorder table td {
+                    vertical-align: top;
+                    color: #000;
+                    border: solid 0px #000;
+                    margin: 0px;
+                    font-weight: normal;
+                    font-size: 13px;
+                    word-wrap: break-word;
+                }
+
+
+
+
+        .tblReport {
+        }
+
+            .tblReport table {
+                color: #000;
+                border: solid 0px #EEEEEE;
+                border-collapse: collapse;
+                empty-cells: show;
+                font-weight: normal;
+                font-size: 13px;
+            }
+
+                .tblReport table th {
+                    background-color: #003366;
+                    height: 20px;
+                    color: #fff;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+
+                .tblReport table td {
+                    vertical-align: middle;
+                    color: #000;
+                    border-right: solid 0px #CCCCCC;
+                    border-left: solid 0px #CCCCCC;
+                    padding: 2px 3px 2px 3px;
+                    font-weight: normal;
+                    font-size: 13px;
+                    word-wrap: break-word;
+                }
+
+
+        .reportContentLeft {
+            float: left;
+            min-height: 42px;
+            width: 670px;
+        }
+
+            .reportContentLeft b {
+                font-weight: 600;
+                font-size: 13px;
+                font-family: 'Helvetica Neue LT Pro' !important;
+            }
+
+        .bodyStyle {
+            font-size: 13px;
+            font-family: 'Helvetica Neue LT Pro' !important;
+        }
+
+            .bodyStyle b {
+                font-weight: 600;
+                font-size: 13px;
+            }
+
+
+        .Critical {
+            background-color: #FF0000 !important;
+        }
+
+        .Caution {
+            background-color: #FFFF00 !important;
+        }
+
+        .Normal {
+            background-color: #00FA00 !important;
+        }
+
+        .BCritical {
+            background-color: #FED0D0 !important;
+        }
+
+        .BCaution {
+            background-color: #FCF9CE !important;
+        }
+
+        .BNormal {
+            background-color: #CEE6C3 !important;
+        }
+
+        .previous {
+            width: 86px !important;
+            border-right: 1.5px solid #3366FF !important;
+            border-left: 3px solid #3366FF !important;
+            border-top: 1.5px solid #3366FF;
+            border-bottom: 1.5px solid #3366FF;
+            text-align: center;
+        }
+
+        .SampleInformation {
+            width: 86px !important;
+            border-right: 1.5px solid #3366FF !important;
+            border-left: 3px solid #fff !important;
+            border-top: 1.5px solid #3366FF;
+            border-bottom: 1.5px solid #3366FF !important;
+            text-align: left;
+            width: 186px !important;
+        }
+
+        .LatestSample {
+            background-color: #cccccc;
+            ";;;;;;;;;;;;;;;;;;;;;;;;;;
+        }
+
+        .EquipmentInfo {
+            font-weight: bold !important;
+        }
+
+        .trStyle {
+            border-bottom: 1px solid #3366FF !important;
+        }
+
+        .thHeadsectin {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%; margin: auto; margin-left: 20px;">
+        <div>
+            <div style="float:left;width:13%">
+                <img src="http://uoastatic.tribocare.com/Static/Gulf_Marine_Individual_Header.png" alt="Logo" height="120" width="110">
+            </div>
+
+            <div style="float:right;width:87%;padding-top: 84px;">
+                <div style="width: 58%; float: left;font-family: 'Helvetica Neue LT Pro' !important;">
+                    <span style="font-size: 19px; font-weight: bold; valign: bottom; line-height: 36px;margin-left: 250px;">Lubricant Condition </span>
+                </div>
+                <div class="Normal" style="width: 40%; font-weight: bold; float: left; height: 25px; text-align: center; padding: 5px;">
+                    <div style="width: 100%; float: left;">
+                        <span style="font-size: 25px;font-family: 'Helvetica Neue LT Pro' !important;">Normal</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+
+            <div style="height: 20px; width: 100%; background-color: #003366; color: white; font-weight: bold;font-family: 'Helvetica Neue LT Pro' !important;" class="EquipmentInfo">
+                Equipment Information
+            </div>
+            <div style="width: 100%;">
+                <div style="float: left; width: 50%;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td width="35%" class="EquipmentInfo" style="font-weight: bold">Company Name</td>
+                            <td>UNION MARITIME LTD</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">Vessel Name</td>
+                            <td>CAPE SARINA</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">IMO Number</td>
+                            <td>9490612</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">Report Date</td>
+                            <td>18-Mar-2024</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">Product Name</td>
+                            <td>GULFSEA SUPERBEAR 3006</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div style="float: right; width: 50%;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td width="35%" class="EquipmentInfo" style="font-weight: bold">Equipment Make</td>
+                            <td>KEMEL</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">Equipment Model</td>
+                            <td>DX-750</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">Machinery Unit</td>
+                            <td>STERN TUBE</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">Equipment S/N</td>
+                            <td>X-38961</td>
+                        </tr>
+                        <tr>
+                            <td class="EquipmentInfo" style="font-weight: bold">Sample Location</td>
+                            <td>SEAL STAND PIPE DRAIN POINT #3</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <table style="width: 100%;>
+                <tr style="page-break-inside: avoid">
+                    <td width="100%" class="tblReport" cellpadding="0" cellspacing="0" style="vertical-align:top;">
+                        <table cellpadding="0" cellspacing="0" style="margin-right: 0px; width: 100%">
+                            <tr bgcolor="#17365C">
+                                <th style="background-color: #003366; color: #fff; height: 20px; text-align: left;" cellpadding="0" cellspacing="0">
+                                    Sample Information
+                                </th>
+                                <th style="background-color: #003366; color: #fff; height: 20px;" cellpadding="0" cellspacing="0">
+                                </th>
+
+                                <th style="background-color: #003366; color: #fff; height: 20px;" cellpadding="0" cellspacing="0">
+                                </th>
+                                <th style="background-color: #003366; color: #fff; height: 20px;" cellpadding="0" cellspacing="0">
+                                </th>
+
+                                <th style="background-color: #003366; color: #fff; height: 20px;" cellpadding="0" cellspacing="0">
+                                    1
+                                </th>
+                                <th style="background-color: #003366; color: #fff; height: 20px;" cellpadding="0" cellspacing="0">
+                                    2
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Sample No
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                    24000326
+                                </td>
+                                <td class="previous LatestSample">
+                                    24509187
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Bottle No
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                    60273104
+                                </td>
+                                <td class="previous LatestSample">
+                                    60237077
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Date Received
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                    02-Jan-24
+                                </td>
+                                <td class="previous LatestSample">
+                                    08-Feb-24
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Sampled Date
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                    19-Dec-23
+                                </td>
+                                <td class="previous LatestSample">
+                                    02-Feb-24
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Port of Origin
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                    Singapore
+                                </td>
+                                <td class="previous LatestSample">
+                                    Indonesia
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Oil on Label
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                    HYDROX BIO 100
+                                </td>
+                                <td class="previous LatestSample">
+                                    HYDROX BIO 100
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Fuel In Use (Sulphur)
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous LatestSample">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Total Machine Hours
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous LatestSample">
+                                    83114
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Lubricant Hours
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous">
+                                </td>
+                                <td class="previous LatestSample">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Lubricant Condition
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous Critical">
+                                    Critical
+                                </td>
+                                <td class="previous LatestSample Normal">
+                                    Normal
+                                </td>
+
+                            </tr>
+                            <tr bgcolor="#17365c">
+                                <td style="font-size: 13px; font-weight: bold; color: #000; background-color: #003366; color: #fff; height: 20px;">
+                                    Results
+                                </td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation" style="font-size: 13px; font-weight: bold; height: 20px;">
+                                    <u>Analysis </u>
+                                </td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous LatestSample"></td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    KV@40°C [mm²/s]
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous Critical">
+                                    137.5
+                                </td>
+                                <td class="previous LatestSample ">
+                                    114.8
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Water [%wt]
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    0.28
+                                </td>
+                                <td class="previous LatestSample ">
+                                    0.15
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    Oxidation [Abs/0.1mm]
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    3.70
+                                </td>
+                                <td class="previous LatestSample ">
+                                    2.36
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    AN [mgKOH/g]
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous Critical">
+                                    10.4
+                                </td>
+                                <td class="previous LatestSample Critical">
+                                    5.04
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">
+                                    PQ Index/2ml
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    <10
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <10
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="SampleInformation" style="font-size: 13px; font-weight: bold; height: 20px;">
+                                    <u>Wear Elemental Analysis [ppm] </u>
+                                </td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous LatestSample"></td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Aluminium (Al) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    3
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Silver (Ag) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    <1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Chromium (Cr) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    <1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Copper (Cu) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    39
+                                </td>
+                                <td class="previous LatestSample ">
+                                    17
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Iron (Fe) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous Critical">
+                                    145
+                                </td>
+                                <td class="previous LatestSample Critical">
+                                    218
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Lead (Pb) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    <1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Tin (Sn) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    5
+                                </td>
+                                <td class="previous LatestSample ">
+                                    4
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Nickel (Ni) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation" style="font-size: 13px; font-weight: bold; height: 20px;">
+                                    <u>Cont. Elements [ppm] </u>
+                                </td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous LatestSample"></td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Boron (B) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    <1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Sodium (Na) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    30
+                                </td>
+                                <td class="previous LatestSample ">
+                                    39
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Magnesium (Mg) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    5
+                                </td>
+                                <td class="previous LatestSample ">
+                                    2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Silicon (Si) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    4
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Manganese (Mn) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Potassium (K) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    <1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Barium (Ba) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    <1
+                                </td>
+                                <td class="previous LatestSample ">
+                                    <1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation" style="font-size: 13px; font-weight: bold; height: 20px;">
+                                    <u>Additive Elements [ppm] </u>
+                                </td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous"></td>
+                                <td class="previous LatestSample"></td>
+                            </tr>
+                            <tr>
+                                <td class="SampleInformation">Calcium (Ca) </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                </td>
+                                <td class="previous ">
+                                    112
+                                </td>
+                                <td class="previous LatestSample ">
+                                    98
+                                </td>
+                            </tr>
+
+
+                        </table>
+
+                    </td>
+                    <td rowspan="2" style="vertical-align: top; border: 0px; float: right; padding: 0px" cellpadding="0" cellspacing="0">
+                        <table cellpadding="0" cellspacing="0" style="margin-right: 0px; border-right: solid 1px #CCCCCC;;width:100%">
+                            <tr bgcolor="#17365c">
+                                <th style="background-color: #003366; color: #fff; height: 19px;"></th>
+                            </tr>
+                            <table Id='tblOldGraphs' width='200px' cellpadding='3' cellspacing='3' style=' float:right;color: #000; border: solid 0px #CCCCCC; background-color: #FFFFFF; border-collapse: collapse;font-size: 11px;'><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/253732/1721316/Ele1.jpg' width='300' height='195' border='0' /></td></tr><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/253732/1721316/Ele2.jpg' width='300' height='195' border='0' /></td></tr><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/253732/1721316/Ele3.jpg' width='300' height='195' border='0' /></td></tr><tr><td style='border: 1px solid #747474'><img id='img' src='http://localhost:9009/AnalysisReports/2024/March/253732/1721316/Ele4.jpg' width='300' height='195' border='0' /></td></tr></table>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div style="font-family: 'Helvetica Neue LT Pro' !important;">
+                Recommendations
+                <div style="border: 1px solid black; height: 310px; width: 980px;font-family: 'Helvetica Neue LT Pro' !important;">
+                    Viscosity result is within the normal limit.
+                    Please note the increase in Acid number. Oil oxidation reaction, Hydrolysis, mix-up with another oil grade etc are the typical reasons for Acid number increase. Apart from degrading the oil quality, increased acidity can create issues on seal lips. Presence of lube oil additive metal presence in this sample is indicative of other oil grade mix up which
+                    might have been caused either by the inadequate flushing during the transition or during top up.
+                    <br />
+                    <br />
+                    Elemental analysis shows significant wear rate of Iron. High Fe and low PQ results indicates corrosive wear (rust) on the ferrous
+                    components.
+                    <br />
+                    <br />
+                    As the current oil in use is a Non-Gulf Marine product, therefore, the results are for REFERENCE ONLY.
+                </div>
+            </div>
+        </div>
+</body>
+</html>

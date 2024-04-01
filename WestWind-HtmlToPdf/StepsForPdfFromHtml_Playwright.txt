@@ -1,0 +1,15 @@
+Steps for Generating PDF file from HTML Template using Playwright.
+___________________________________________________________________
+
+1. Create the console Application.
+
+2. Install the Microsoft.Playwright.NUnit package from Nuget packet manager tools
+					(or)
+   Run the below command in the package manager console 
+	dotnet add package Microsoft.Playwright.NUnit.
+
+3. Create one folder called Tempates. Place all the Html templates inside that folder.
+
+4. Inside the Program.cs write the script for generating PDF from HTML template.
+
+5. After done all the above steps run the project.

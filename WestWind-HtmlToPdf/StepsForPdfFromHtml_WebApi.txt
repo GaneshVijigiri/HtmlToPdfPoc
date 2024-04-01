@@ -1,0 +1,18 @@
+Steps for Generating PDF from Html template using Web Api
+_________________________________________________________
+
+1. Make sure to exist Microsift edge Webview2 runtime in our local machine. 
+   We need to check Apps->Installed Apps Whether the above runtime exist. If not make sure to install.
+
+2. Create the Web Api Project from Visual Studio.
+
+3. Install Westwind.WebView.HtmlToPdf from Package manager tools
+				(or)
+   Run the below command inside the package manager console.
+	dotnet add package westwind.webview.htmltopdf
+
+4. Create one folder called Templates. Place all the Html templates inside the templates folder.
+
+5. Create one contrller with your custom constroller name. Write all the logic for Generating Html to Pdf inside the controller.
+
+6. After done all the above steps run the project.
