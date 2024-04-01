@@ -13,6 +13,7 @@ ___________________________________________________________________
 4. Inside the Program.cs write the script for generating PDF from HTML template.
 
 5. After done all the above steps run the project.
+_________________________________________________________
 
 
 Steps for Generating PDF from Html template using Web Api
@@ -33,6 +34,7 @@ _________________________________________________________
 5. Create one contrller with your custom constroller name. Write all the logic for Generating Html to Pdf inside the controller.
 
 6. After done all the above steps run the project.
+_________________________________________________________
 
 Steps for Generating PDF from Html template using WebView2
 _________________________________________________________
