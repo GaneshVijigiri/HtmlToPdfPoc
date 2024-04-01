@@ -12,9 +12,6 @@ namespace HtmlToPdfPoc
             var templatePath = Path.Combine(solutionDirectory, "Templates", "2.html");
             var outputPath = Path.Combine(solutionDirectory, "Downloads", "output2.pdf");
 
-            //var templatePath = "E:\\Playwright\\HtmlToPdfPoc - project\\HtmlToPdfPoc\\Templates\\2.html";
-            //var outputPath = "E:\\Playwright\\HtmlToPdfPoc - project\\HtmlToPdfPoc\\Downloads\\output2.pdf";
-
             await pdfGenerator.GeneratePdfFromHtmlTemplate(templatePath, outputPath);
         }
     }
