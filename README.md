@@ -4,8 +4,7 @@
 
 2. Install the **Microsoft.Playwright.NUnit package from Nuget packet manager tools**\
 					(or)\
-   Run the below command in the package manager console\ 
-   	**dotnet add package Microsoft.Playwright.NUnit.**
+   Run the below command in the package manager console\ **dotnet add package Microsoft.Playwright.NUnit.**
 
 3. Create one folder called Tempates. Place all the Html templates inside that folder.
 
