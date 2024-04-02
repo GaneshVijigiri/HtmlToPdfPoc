@@ -1,4 +1,4 @@
-#Steps for Generating PDF file from HTML Template using Playwright.
+# Steps for Generating PDF file from HTML Template using Playwright.
 ___________________________________________________________________
 
 1. Create the console Application.
@@ -16,7 +16,7 @@ ___________________________________________________________________
 _________________________________________________________
 
 
-#Steps for Generating PDF from Html template using Web Api
+# Steps for Generating PDF from Html template using Web Api
 _________________________________________________________
 
 1. Make sure to exist Microsift edge Webview2 runtime in our local machine. 
@@ -36,7 +36,7 @@ _________________________________________________________
 6. After done all the above steps run the project.
 _________________________________________________________
 
-#Steps for Generating PDF from Html template using WebView2
+# Steps for Generating PDF from Html template using WebView2
 _________________________________________________________
 
 1. Installed Canary Channel WebView2 runtime package in Local Machine from the following URL.
